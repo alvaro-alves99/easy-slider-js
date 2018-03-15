@@ -1,0 +1,120 @@
+        .container-formula{
+           width:22%;
+           height:550px;
+           position:relative;
+           display:inline-block;
+       }
+
+       .formula-icone h3{font-size: 1.2em !important;}
+
+
+       .inner-for{
+           width:100%;
+           height:100%;
+           background-color:#c78370;
+           position:absolute;
+           top:0;
+           left:0;
+           text-align:center;
+       }
+
+       .fig-real img{
+           width:43%;
+           position:absolute;
+           top:10%;
+           right:50%;
+           transform:translatex(50%);
+       }
+
+       .fig-real h3{
+           font-size:1.5em;
+           text-transform:uppercase;
+           font-weight:700;
+           color:white;
+           margin-bottom:10px;
+
+       }
+
+       .fig-real p{
+           font-weight:400;
+           width:80%;
+           font-size:1.15em;
+           position:absolute;
+           right:50%;
+           transform:translatex(50%);
+           margin-top:0;
+
+       }
+
+       .fig-real figcaption{
+           position:absolute;
+           width:80%;
+           top:45%;
+           left:50%;
+           font-family:"raleway", sans-serif;
+           text-align:center;
+           display:inline-block;
+           transform:translatex(-50%);
+           color:white;
+       }
+
+
+
+       .inner-formula{
+           background-color:white;
+           transition:.8s;
+       }
+
+       .inner-for:first-child{
+           z-index:1;
+           opacity:0;
+           transition:.8s;
+       }
+
+       .inner-for:first-child:hover{
+           opacity:1;
+       }
+
+       .inner-formula img{
+           position:absolute;
+           width:70%;
+           top:50%;
+           left:50%;
+           transform:translate(-50%, -50%);
+       }
+
+       .section-geral{
+           display:flex;
+           justify-content:center;
+       }
+
+       .botao{
+           position:absolute;
+           width:90px;
+           height:90px;
+           z-index: 14;
+           background-color:transparent;
+           cursor:pointer;
+           border:none;
+           top:50%;
+           background-size:contain;
+           backgorund-position:center;
+           background-repeat:no-repeat;
+           transform:translatey(-50%);
+       }
+
+       .botao-next{
+           left:100%;
+           transform:translatex(-100%);
+           background-image:url(http://homolog.tfs.com.br/wp-content/uploads/2018/03/right-arrow.png);
+       }
+
+       .botao-prev{
+           left:0%;
+           background-image:url(http://homolog.tfs.com.br/wp-content/uploads/2018/03/right-arrow.png);
+           transform:scaleX(-1);
+       }
+
+       .container-next, .container-prev{
+           display:none;
+       }
