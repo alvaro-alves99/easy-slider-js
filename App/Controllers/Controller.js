@@ -1,17 +1,22 @@
 class Controller{
-    constructor(tipo){
-        this.containers = document.querySelectorAll(".container-formula");
-        if(tipo == 'next'){
-            this.containerDelete = this.containers[0];
-            this.containerShow = document.querySelector(".container-next");
-        }
+    constructor(type){
+        let myArray = Array.from(document.querySelectorAll(".container-formula"));
 
-        if(tipo == 'prev'){
-            this.containerDelete = this.containers[this.containers.length - 1];
-            this.containerShow = document.querySelector(".container-prev");
-        }
+        myArray.reverse();
 
-        console.log(this.containerDelete);
-        console.log(this.containerShow);
+        console.log(myArray);
+
+        this.containersTotal = myArray;
+
+        this.containersShow = Array.from(document.querySelectorAll(".container-formula:not(.container-formula--desaparece)"));
+
+        this.containersHidden = Array.from(document.querySelectorAll(".container-formula--desaparece"));
+
+        this.model = Model.DefineSliders(type, this.containersShow, this.containersHidden);
+
+        this.view = View.ShowSliders(this.model);
+
+        console.log(this.containersShow);
+        console.log(this.containersHidden);
     }
 }

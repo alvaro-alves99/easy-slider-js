@@ -1,21 +1,24 @@
+var teste = 0;
+
 function numberRows(number, classe){
     let containers = document.querySelectorAll("." + classe);
-    console.log(containers);
 
     if(number == containers.length){
         throw new Error("Number of columns cannot be equal to containers length");
     }
 
-    let numberRemove = ((containers.length - 1) - number) + containers.length - 1;
-    var posicoesDeletadas = [];
+    let numberRemove = containers.length - number;
+    let posicoesDeletadas = [];
 
-    for(i = numberRemove; i ++; i <containers.length){
-        posicoesDeletadas.push(i);
+    while(numberRemove > 0){
+        posicoesDeletadas.push(containers.length - numberRemove);
+        numberRemove--;
     }
 
-    console.log(posicoesDeletadas);
+    posicoesDeletadas.forEach(function(n){
+        containers[n].classList.add("container-formula--desaparece");
+    });
 
-    console.log(numberRemove);
 }
 
-numberRows(3, "container-formula");
+numberRows(4, "container-formula");
