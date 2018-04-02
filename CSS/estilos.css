@@ -106,12 +106,12 @@
        .botao-next{
            left:100%;
            transform:translatex(-100%);
-           background-image:url(http://homolog.tfs.com.br/wp-content/uploads/2018/03/right-arrow.png);
+           background-image:url(http://www.jolijoli.com.br/wp-content/uploads/2018/03/right-arrow.png);
        }
 
        .botao-prev{
            left:0%;
-           background-image:url(http://homolog.tfs.com.br/wp-content/uploads/2018/03/right-arrow.png);
+           background-image:url(http://www.jolijoli.com.br/wp-content/uploads/2018/03/right-arrow.png);
            transform:scaleX(-1);
        }
 
